@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#mainHead{
+    background-color: #3ABEFF;
+
+}
+body{
+    height: 100vh;
+    background-color: #DEE4F1;
+    font-family: 'Roboto Slab', serif;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.container{
+    width: 70%;
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+}
+#error-message{
+    display: none;
+    position: absolute;
+    top: 0;
+    background: #FCD6D7;
+    color: #ED1B24;
+    padding: 0.3em 0.5em;
+    font-size: 1.1em;
+    left: 0;
+    right: 0;
+    /* border-radius: 5px; */
+    border: 1px solid #ED1B24;
+    border-top: 0px;
+    gap: 5px;
+}
+#main_header{
+    display: flex;
+    height: 4em;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo{
+    width: 3.3em;
+    height: 4em;
+    overflow: hidden;
+}
+#logo img{
+    width: 100%;
+    height: 100%;
+
+}
+#siteName{
+    font-size: 1.8em;
+}
+#mainSection{
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 760px;
+    position: relative;
+}
+#mainSubSection{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#converter{
+    width: 50%;
+    position: relative;
+    height: auto;
+    background-color: #B9E3F0;
+    border-radius: 10px;
+    border: 3px solid #3ABEFF;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    max-width: 625px;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+#visual {
+    width: 20em;
+    max-width: 320px;
+    height: 28em;
+}
+#thermometer {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+#thermometer img {
+    filter: invert(0);
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+#mercury {
+    height: 0%;
+    width: 23px;
+    background: red;
+    position: absolute;
+    z-index: 0;
+    bottom: 9.2em;
+    left: 6.5em;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+}
+#convHeading{
+    padding: 1em 0.5em;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#convForm{
+    padding: 1em 0.5em;
+    position: relative;
+    height: 75%;
+    display: flex;
+    /* top: 1rem; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.7em;
+}
+#convForm input, select, #convertTo, #convForm span{
+    padding: 0.4em;
+    display: flex;
+    font-size: 1em;
+    border: 0;
+    /* vertical-align: middle; */
+    height: 38px;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    color: #5221A1;
+    border-bottom: 3px solid #5221A1;
+    background-color: #F6F2FE;
+    align-items: center;
+    justify-content: center;
+}
+select:hover{
+    cursor: pointer;
+}
+select:focus{
+    outline: none;
+
+}
+
+.convItems{
+    display: flex;
+    align-items: center;
+    width: 25em;
+    /* column-gap: 10px; */
+    justify-content: space-between;
+}
+#convSubmit{
+    padding: 7px;
+    width: 150px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1em;
+    background-color: #4B0082;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    /* top: 150px; */
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+#convSubmit:hover{
+    padding: 5px 7px;
+    background-color: #F6F2FE;
+    color: #4B0082;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 2px solid #4B0082;
+}
+
+/* #convertTo{
+    position: relative;
+    left: 61px;
+} */
+#convertTo:hover{
+    cursor: default;
+}
+.sizeC1 {
+    width: 150px;
+}
+
+#temp{
+    padding: 8px;
+}
+#temp::placeholder{
+    color: #5221A1;
+}
+#temp:focus{
+    background-color: #f4dbff;
+    outline: none;
+    border: 1px solid #5221A1;
+    border-bottom: 3px solid #5221A1;
+}
+#resItems{
+   
+    transition: all 0.5s;
+    position: relative;
+    bottom: 10px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+#resultValue{
+    min-height: 38px;
+    overflow: hidden;
+    height: auto!important;
+}
+.resOpacity{
+    opacity: 0;
+}
+.shiftRight{
+    position: relative;
+    left: 3.7em;
+}
+#infoMain{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    background-color: #68686875;
+}
+#info{
+    width: 24%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #dee4f1;
+    overflow: hidden;
+    /* min-height: 175px; */
+    position: relative;
+    min-width: 300px;
+    max-width: 400px;
+
+}
+#infoHead{
+    padding: 0.5em 1em;
+    background: #3abeff;
+}
+#infoData{
+    padding: 0.5em 1em;
+
+}
+#okay{
+    margin: 0.5em 1em;
+    margin: 0.5em 1em 0.8em 1em;
+    padding: 0.1em;
+    width: 20%;
+    border-radius: 3px;
+    background: indigo;
+    color: white;
+    border: 0.2em solid indigo;
+    font-family: 'Roboto Slab', serif;
+}
+#okay:hover{
+    background-color: #F6F2FE;
+    color: #4B0082;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 0.2em solid #4B0082;
+}
+@media screen and (max-width:1599px) {
+    html{
+        font-size: 14px;
+    }
+    #okay{
+        padding: 0.2em;
+        width: 18%;
+    }
+    .shiftRight {
+        left: 2.2em;
+    }
+    .convItems{
+        width: 26em;
+    }
+    #convForm input, select, #convertTo, #convForm span {
+        height: 35px;
+    }
+    #resultValue {
+        min-height: 35px;
+    }
+}
+@media screen and (max-width:1279px) {
+    html{
+        font-size: 12px;
+    }
+    #okay{
+        font-size: 0.9em;
+        padding: 0.1em;
+        width: 18%;
+    }
+    #converter {
+        width: 50%;
+    }
+    .container {
+        width: 75%;
+    }
+    .shiftRight {
+        left: 2.8em;
+    }
+    .convItems{
+        width: 26em;
+    }
+    #convHeading {
+        padding: 1.5em 0.5em 1em 0.5em;
+    }
+    #convForm input, select, #convertTo, #convForm span {
+        height: 30px;
+        padding: 0.3em;
+    }
+    #resultValue {
+        min-height: 31px;
+    }
+    .sizeC1 {
+        width: 120px;
+    }
+    #mainSection {
+        height: 85%;
+    }
+    #convSubmit{
+    margin-bottom: 1.5em;
+    }
+}
+
+/* Tablets, Mobile, Portrait mobiles */
+@media screen and (max-width:991px) {
+    html{
+        font-size: 14px;
+    }
+    #mainSection {
+        height: 90%;
+        margin-top: 4em;
+    }
+    #mainSubSection {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #convForm input, select, #convertTo, #convForm span {
+        height: 33px;
+        padding: 0.4em;
+    }
+    #converter {
+        width: 90%;
+        max-width: 475px;
+    }
+    #visual {
+        width: 20em;
+        max-width: 320px;
+        height: 27em;
+    }
+    #convSubmit {
+        margin-bottom: 1.5em;
+        margin-top: 0.3em;
+        width: 110px;
+    }
+    #convForm {
+        gap: 1.5em;
+    }
+    #convHeading {
+        padding: 1.5em 0.5em 1em 0.5em;
+    }
+    #mercury {
+        height: 0%;
+        width: 21px;
+        background: red;
+        position: absolute;
+        z-index: 0;
+        bottom: 8.9em;
+        left: 6.5em;
+        border-radius: 10px 10px 0 0;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-border-radius: 10px 10px 0 0;
+        -moz-border-radius: 10px 10px 0 0;
+        -ms-border-radius: 10px 10px 0 0;
+        -o-border-radius: 10px 10px 0 0;
+    }
+    .sizeC1 {
+        width: 130px;
+    }
+    .shiftRight {
+        left: 3.8em;
+    }
+    .convItems {
+        width: 25em;
+    }
+}
+
+@media screen and (max-width:767px) {
+    html{
+        font-size: 12px;
+    }
+    #mainSection {
+        height: 90%;
+    }
+    #mainSubSection {
+        width: 100%;
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #converter {
+        width: 90%;
+        max-width: 475px;
+    }
+    .container {
+        width: 90%;
+    }
+    #convSubmit {
+        margin-bottom: 1em;
+        margin-top: 0.3em;
+        width: 110px;
+    }
+    #convForm {
+        gap: 1.5em;
+    }
+    #convHeading {
+        padding: 1em 0.5em 1em 0.5em;
+    }
+    .convItems {
+        width: 24em;
+    }
+    #temp{
+        width: 140px;
+    }
+    .sizeC1 {
+        width: 120px;
+    }
+    .shiftRight {
+        left: 1.8em;
+    }
+    #visual {
+        width: 16em;
+        max-width: 320px;
+        height: 21em;
+    }
+    #mercury {
+        height: 0%;
+        width: 13px;
+        background: red;
+        position: absolute;
+        z-index: 0;
+        bottom: 6.9em;
+        left: 5.3em;
+        border-radius: 10px 10px 0 0;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-border-radius: 10px 10px 0 0;
+        -moz-border-radius: 10px 10px 0 0;
+        -ms-border-radius: 10px 10px 0 0;
+        -o-border-radius: 10px 10px 0 0;
+    }
+}
+@media screen and (max-width:464px) {
+    html{
+        font-size: 12px;
+    }
+    .convItems {
+        width: 24em;
+    }
+    #temp {
+        padding: 8px;
+        width: 140px;
+    }
+    .sizeC1 {
+        width: 100px;
+    }
+    #convForm input, select, #convertTo, #convForm span {
+        height: 28px;
+        padding: 0.3em;
+    }
+    .convItems {
+        width: 22em;
+    }
+    #visual {
+        width: 16em;
+        max-width: 320px;
+        height: 21em;
+    }
+    #mercury {
+        height: 0%;
+        width: 13px;
+        background: red;
+        position: absolute;
+        z-index: 0;
+        bottom: 6.9em;
+        left: 5.3em;
+        border-radius: 10px 10px 0 0;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-border-radius: 10px 10px 0 0;
+        -moz-border-radius: 10px 10px 0 0;
+        -ms-border-radius: 10px 10px 0 0;
+        -o-border-radius: 10px 10px 0 0;
+    }
+    .shiftRight {
+        left: 3.5em;
+    }
+    #converter {
+        width: 100%;
+    }
+}

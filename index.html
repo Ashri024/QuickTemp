@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickTemp - A temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body onload="infoBox()">
+    <div id="infoMain">
+    <div id="info">
+        <header id="infoHead">
+            <strong>A little bit of info </strong>
+        </header>
+        <p id="infoData">To see the thermometer visual animation in a better way, convert values ranging from 0 to 100 degree celsius. Thanks for reading me, Bye! :D</p>
+        <button id="okay" onclick="vanishMessage()">Okay</button>
+    </div>
+</div>
+    <!-- Header Section -->
+    <header id="mainHead">
+        <div class="container" id="main_header">
+        <div id="logo">
+            <img src="/images/temperature-high-solid.svg" alt="QuickTemp Icon">
+        </div>
+
+        <span id="siteName">QuickTemp</span>
+    </div>
+    </header>
+
+    <!-- Main section -->
+    <div class="container">
+    <p id="error-message"></p>
+</div>
+    <main class="container" id="mainSection">
+        <div id="mainSubSection">
+        <!-- Temperature converter -->
+        <section id="converter">
+            <p id="convHeading">Convert Temperature from Celsius to Fahrenheit</p>
+
+            <form action="" id="convForm" onsubmit="return preventDef()">
+
+            <div class="convItems">
+            <input type="text" placeholder="Enter the temperature" id="temp" name="temp" required>
+            
+            <select name="selection1" id="selection1" class="sizeC1 moveLeft1" onclick="selectOptions1()">
+                <option value="celsius" selected>Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+                <option value="rankine">Rankine</option>
+            </select>
+        </div>
+
+
+        <div class="convItems">
+            <span id="convertTo" class="sizeC1 shiftRight">Convert to: </span>
+            <select name="selection2 " id="selection2" class="sizeC1 moveLeft1">
+                <!-- <option value="celsius" >Celsius</option> -->
+                <option value="fahrenheit" selected>Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+                <option value="rankine">Rankine</option>
+            </select>
+            </div>
+        
+            <button type="submit" id="convSubmit">Convert</button>
+            <!-- <button id="convert">Convert</button> -->
+        </form>
+        </section>
+
+        <!-- Thermometer vizualisation -->
+        <section id="visual" title="To see the thermometer visual animation in a better way, convert values ranging from 0 to 100 degree celsius">
+            <div id="thermometer">
+                <img src="/images/Group 14.png" alt="thermometer visualization">
+                <div id="mercury"></div>
+            </div>
+        </section>
+
+    </div>
+    </main>
+    <script src="/app.js"></script>
+</body>
+
+</html>
