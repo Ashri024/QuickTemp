@@ -298,7 +298,7 @@ temp.addEventListener("input", function () {
     temp.value = "";
   } else if((numericValue < -100000000) || (numericValue > 100000000)){
     errorMessage.style.display="flex";
-    errorMessage.innerHTML = `<img src="images/info-circle.svg" alt="info"> Please enter numbers ranging from -10<sup>8</sup> to +10<sup>8</sup>`;
+    errorMessage.innerHTML = `<img src="images/info-circle.svg" alt="info"> <span>Please enter numbers ranging from -10<sup>8</sup> to +10<sup>8</sup></span>`;
     temp.value = "";
   }else{
 
