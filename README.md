@@ -1,1 +1,1 @@
-# QuickTemp-
+# QuickTemp - A quick temperature converter
